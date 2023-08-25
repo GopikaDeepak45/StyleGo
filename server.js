@@ -1,7 +1,14 @@
 const express=require('express')
 const expressLayouts=require('express-ejs-layouts')
 const path=require('path')
+const connectDb=require('./models/db')
+const session=require('express-session')
+const cookieParser=require('cookie-parser')
 
+
+const PORT=process.env.PORT||3000
+
+const userRoutes=require('./routes/userRoutes')
 
 //creae express app
 const app=express()
@@ -11,31 +18,50 @@ app.use(expressLayouts)
 
 //set view engine
 app.set('view engine','ejs')
-
 app.use(express.static(path.join(__dirname,'public')))
 
 
+//db connecection
+connectDb();
+//parsing
+app.use(express.json())
+app.use(express.urlencoded({extended:true}))
 
-//api
-app.get('/',(req,res)=>{
-    res.render('user/home',{layout:'./layout/user-main'})
+//session and cookies
+
+//app.use(nocache());
+
+app.use(session({
+    secret: "your-secret-key",
+    resave: false,
+    saveUninitialized: true,
+}))
+app.use((req,res,next)=>{
+    res.locals.session=req.session
+    next()
 })
-app.get('/shop',(req,res)=>{
-    res.render('user/shop',{layout:'./layout/user-main'})
-})
-app.get('/login',(req,res)=>{
-    res.render('user/login',{layout:'./layout/user-main'})
-})
-app.get('/signUp',(req,res)=>{
-    res.render('user/sign-up',{layout:'./layout/user-main'})
-})
-app.get('/forgot',(req,res)=>{
-    res.render('user/forgot-password',{layout:'./layout/user-main'})
-})
-app.get('/detail',(req,res)=>{
-    res.render('user/product-detail',{layout:'./layout/user-main'})
-})
+
+// app.use((req,res,next)=>{
+//     if(req.session && req.session.authenticated){
+//         res.locals.isAuthenticated=true;
+//         res.locals.userName='malu';
+//     }
+//     console.log('locals',res.locals.userName)
+//     next()
+// })
+app.use(cookieParser());
+
+//parse json
+app.use(express.json())
+app.use(express.urlencoded({extended:true}))
+
+//for user login check
+
+
+//routes
+app.use('/',userRoutes)
+
 //listen to port
-app.listen(3000,()=>{
-    console.log('App is running on url http://localhost:3000')
+app.listen(PORT,()=>{
+    console.log(`App is running on url http://localhost:${PORT}`)
 })

@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <!-- fontawesome CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../public/css/admin-style.css">
+    <title>Mamun | Admin Panel</title>
+  </head>
+  <body class="bg-right">
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col-md-10 col-11 mx-auto">
+
+                <nav aria-label="breadcrumb ">
+                    <ol class="breadcrumb bg-common">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item"><a href="#">User</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Profile Settings</li>
+                    </ol>
+                  </nav>
+
+                  
+                  <div class="row">
+                       <!-- left side div-->
+                      <div class="col-lg-3 col-md-4 d-md-block">
+                          <div class="card bg-common card-left">
+                              <div class="card-body">
+                                <nav class="nav d-md-block d-none">
+                                    <a data-toggle="tab" class="nav-link active" href="#profile"><i class="fas fa-user mr-1"></i> Profile</a>
+                                    <a data-toggle="tab" class="nav-link" href="#account"><i class="fas fa-cog mr-1"></i> Account Settings</a>
+                                    <a data-toggle="tab" class="nav-link" href="#security"><i class="fas fa-user-shield mr-1"></i> Security</a>
+                                    <a data-toggle="tab" class="nav-link" href="#notification"><i class="fas fa-bell mr-1"></i> Notification</a>
+                                    <a data-toggle="tab" class="nav-link" href="#billing"><i class="fas fa-money-check-alt mr-1"></i> Billing</a>
+                                  </nav>
+                              </div>
+                          </div>
+                      </div>
+                      <!--right-side div-->
+                      <div class="col-lg-9 col-md-8">
+                          <div class="card">
+                              <div class="card-header border-bottom mb-3 d-md-none">
+
+                                <ul class="nav nav-tabs card-header-tabs nav-fill">
+                                    <li class="nav-item">
+                                      <a data-toggle="tab" class="nav-link active" href="#profile"><i class="fas fa-user"></i></a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a data-toggle="tab" class="nav-link" href="#account"><i class="fas fa-cog"></i></a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a data-toggle="tab" class="nav-link" href="#security"><i class="fas fa-user-shield"></i></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a data-toggle="tab" class="nav-link" href="#notification"><i class="fas fa-bell"></i></a>
+                                      </li>
+                                      <li class="nav-item">
+                                        <a data-toggle="tab" class="nav-link" href="#billing"><i class="fas fa-money-check-alt"></i></a>
+                                      </li>
+                                  </ul>
+                              </div>
+                                                        <!-- user detailes dashboard -->
+                          <div class="card-body tab-content border-0">
+
+                            <!-- user live profile -->
+                            <div class="tab-pane active py-5" id="profile">
+                                <h5>Your profile information</h5>
+                                <hr>
+                                <form action="">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label"for="exampleFormControlInput1">Your full name</label>
+                                        <input type="username" class="form-control" id="exampleFormControlInput1" placeholder="Mamun Uddin">
+                                        <small class="form-text text-muted">Please enter your full name</small>
+                                      </div>
+                                      <div class="form-group mb-3">
+                                        <label class="form-label"for="exampleFormControlInput1">Your Email address</label>
+                                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter your email">
+                                      </div>
+                                      <div class="form-group mb-3">
+                                        <label class="form-label"for="exampleFormControlInput1">Your Contact Number</label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="01846241535">
+                                       
+                                      </div>
+                                      <div class="form-group mb-3">
+                                        <label class="form-label"for="exampleFormControlInput1">Your  Location</label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Chittagong, Bangladesh">                                       
+                                      </div>
+                                      <div class="form-group mb-3">
+                                        <label class="form-label"for="exampleFormControlInput1">Facebook Url</label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="https://web.facebook.com/mamun.uddin.niloy/">                                       
+                                      </div>
+                                <div class="form-group mb-3">
+                                    <label class="form-label"for="exampleFormControlInput1">Your Bio</label>
+                                    <textarea type="username" class="form-control" id="exampleFormControlInput1" placeholder="Mamun Uddin">I am a full stack web developer</textarea>
+                                    
+                                  </div>
+                                  <h6>All of the information are optional.You can change it any time.You can ukpdate your profile ,you can reset your profile, you can modify your profile anytime.</h6> <hr>
+                                 <button class="btn btn-outline-success mr-1" type="submit">Update Profile</button>
+                                 <button class="btn btn-outline-danger" type="reset">Reset Profile</button>
+                                </form>
+
+                            </div>
+                            <!-- Account settings -->
+                            <div class="tab-pane py-5" id="account">
+                                <h6>Your Account Information</h6>
+                                <hr>
+                                <form action="">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label"for="exampleFormControlInput1">User Name</label>
+                                        <input type="username" class="form-control" id="exampleFormControlInput1" placeholder="Mamun">
+                                        <small class="form-text text-muted">After changing username it can be recover by giving us the valid information</small>
+                                      </div> <hr>
+                                      <h6 class="text-danger">Delete Account</h6>
+                                      <p class="text-info">Once you delete your account , it will never be recover.Please be sure of that</p>
+                                      <button class="btn btn-danger">Delete Account</button>
+                                </form>
+                            </div>
+                            <!-- user Secuiruty -->
+                            <div class="tab-pane py-5" id="security">
+                                <h6>Security Settings</h6>
+                                <hr>
+                                <h6>Change Password</h6>
+                                <form action="">
+                                <input type="password" class="form-control mb-1" id="inputPassword4" placeholder="Enter your old password">
+                                <input type="password" class="form-control mb-1" id="inputPassword4" placeholder="Enter New Password">
+                                <input type="password" class="form-control mb-1" id="inputPassword4" placeholder="Confirm New Password">
+                                <button class="btn btn-success " type="submit">Submit</button> 
+                            </form>
+                            <hr>
+                            <h6>Two factor authentication</h6>
+
+                            <div class="btn btn-primary">Enable two factor authentication</div>
+                            </div>
+                            <!-- Notification -->
+                            <div class="tab-pane py-5" id="notification">
+                                <h6>Notification Settings</h6>
+                                <hr>
+                                <form>
+                                    <h6>Security Aler</h6>
+                                    <label for="">Received security alert via email</label>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+                                      </div>
+                                      <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                        <label class="custom-control-label" for="customCheck2">Check this custom checkbox</label>
+                                      </div>
+                                      <div class="my-3">
+                                          <label for="">Sms Notification</label>
+
+                                          <ul class="list-group">
+                                            <li class="list-group-item">Comment
+                                                <div class="custom-control custom-switch mt-2">
+                                                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                                    <label class="custom-control-label" for="customSwitch1"></label>
+                                                  </div>
+                                            </li>
+                                            <li class="list-group-item">Update From People
+                                                <div class="custom-control custom-switch mt-2">
+                                                    <input type="checkbox" class="custom-control-input" id="customSwitch2">
+                                                    <label class="custom-control-label" for="customSwitch2"></label>
+                                                  </div>
+                                            </li>
+                                            <li class="list-group-item">Remainders
+                                                <div class="custom-control custom-switch mt-2">
+                                                    <input type="checkbox" class="custom-control-input" id="customSwitch3">
+                                                    <label class="custom-control-label" for="customSwitch3"></label>
+                                                  </div>
+                                            </li>
+                                            <li class="list-group-item">Events
+                                                <div class="custom-control custom-switch mt-2">
+                                                    <input type="checkbox" class="custom-control-input" id="customSwitch4">
+                                                    <label class="custom-control-label" for="customSwitch4"></label>
+                                                  </div>
+                                            </li>
+                                            <li class="list-group-item">Page You follow
+                                                <div class="custom-control custom-switch mt-2">
+                                                    <input type="checkbox" class="custom-control-input" id="customSwitch5">
+                                                    <label class="custom-control-label" for="customSwitch5"></label>
+                                                  </div>
+                                            </li>
+                                          </ul>
+                                      </div>
+                                      
+                                </form>
+                            
+                            </div>
+                            <!-- user Billing info -->
+                            <div class="tab-pane py-5" id="billing">
+                                <h6>Billing Settings</h6> <hr>
+
+                                <h6>Payment Method</h6>
+                                <small class="text-muted text-info">You have not added a payment method</small> <br>
+                                <button class="btn btn-success my-3">Add Payment Method</button>
+                                <h6 class="mt-2">Payment History</h6>
+                                <p class="text-center border border-primary py-5">You have no have history</p>
+                            </div>
+
+                          </div>
+
+                          </div>
+                      </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>
